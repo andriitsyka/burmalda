@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hunger Map Analysis</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Hunger Map Analysis</h1>
+    <p>Аналітика голоду, клімату та факторів впливу</p>
+</header>
+
+<nav>
+    <button onclick="show('home')">Головна</button>
+    <button onclick="show('countries')">Країни</button>
+    <button onclick="show('rain')">Опади</button>
+    <button onclick="show('nature')">Фактори</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <div class="card">
+        <h2>Hunger Map</h2>
+        <p>Інструмент для аналізу глобального рівня продовольчої безпеки.</p>
+    </div>
+
+    <div class="card">
+        <h2>Суть проблеми</h2>
+        <p>Голод формується під впливом клімату, економіки, конфліктів та інфраструктури.</p>
+    </div>
+
+    <div class="card">
+        <h2>Карта світу</h2>
+        <img <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/World_map_blank_without_borders.svg" alt="Карта світу">>
+    </div>
+</section>
+
+<!-- COUNTRIES -->
+<section id="countries">
+    <div class="card">
+        <h2>Країни з високим рівнем голоду</h2>
+
+        <div class="filters">
+            <button onclick="filter('all')">All</button>
+            <button onclick="filter('africa')">Africa</button>
+            <button onclick="filter('asia')">Asia</button>
+            <button onclick="filter('america')">America</button>
+        </div>
+
+        <ul>
+            <li class="country africa">Сомалі</li>
+            <li class="country africa">Чад</li>
+            <li class="country asia">Ємен</li>
+            <li class="country asia">Афганістан</li>
+            <li class="country america">Гаїті</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Таблиця даних</h3>
+        <table>
+            <tr>
+                <th>Країна</th>
+                <th>Регіон</th>
+                <th>Причина</th>
+            </tr>
+            <tr>
+                <td>Сомалі</td>
+                <td>Африка</td>
+                <td>конфлікти, посуха</td>
+            </tr>
+            <tr>
+                <td>Ємен</td>
+                <td>Азія</td>
+                <td>війна</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<!-- RAIN -->
+<section id="rain">
+    <div class="card">
+        <h2>Опади vs Голод</h2>
+        <canvas id="chart"></canvas>
+    </div>
+
+    <div class="card">
+        <h3>Аналіз</h3>
+        <p>Низькі опади не завжди означають високий рівень голоду.</p>
+    </div>
+</section>
+
+<!-- NATURE -->
+<section id="nature">
+    <div class="grid">
+        <div class="card">🌿 Рослинність</div>
+        <div class="card">🌧 Посухи</div>
+        <div class="card">🌊 Повені</div>
+        <div class="card">⚔ Конфлікти</div>
+        <div class="card">🌪 Урагани</div>
+        <div class="card">🚜 Сніг інфраструктура</div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

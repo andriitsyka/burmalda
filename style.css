@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Inter, Arial;
+    background: #0b0f17;
+    color: #e5e7eb;
+}
+
+header {
+    text-align: center;
+    padding: 28px;
+    background: #111827;
+    border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    color: #9ca3af;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    background: #0f172a;
+    position: sticky;
+    top: 0;
+}
+
+nav button {
+    background: #1f2937;
+    color: white;
+    border: 1px solid #2b3446;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+nav button:hover {
+    background: #334155;
+}
+
+section {
+    display: none;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
+.card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    padding: 16px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #1f2937;
+    padding: 10px;
+}
+
+th {
+    background: #1f2937;
+}
+
+ul {
+    padding-left: 18px;
+}
+
+.filters button {
+    margin: 5px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
